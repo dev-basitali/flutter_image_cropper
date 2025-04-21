@@ -27,14 +27,14 @@ class _CropperActionBarState extends State<CropperActionBar> {
     final iconColor = widget.themeData?.rotateIconColor;
     final themeData = iconColor != null
         ? Theme.of(context).copyWith(
-            iconTheme: IconThemeData(color: iconColor),
-            iconButtonTheme: IconButtonThemeData(
-              style: ButtonStyle(
-                foregroundColor:
-                    WidgetStateColor.resolveWith((states) => iconColor),
-              ),
-            ),
-          )
+      iconTheme: IconThemeData(color: iconColor),
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor:
+          WidgetStateColor.resolveWith((states) => iconColor),
+        ),
+      ),
+    )
         : Theme.of(context);
     return Theme(
       data: themeData,
@@ -45,7 +45,7 @@ class _CropperActionBarState extends State<CropperActionBar> {
         children: [
           IconButton(
             onPressed: () {
-              widget.onRotate(RotationAngle.counterClockwise90);
+              widget.onRotate(RotationAngle.counterClockwise1);
             },
             tooltip: widget.translations.rotateLeftTooltip,
             icon: Icon(
@@ -70,7 +70,7 @@ class _CropperActionBarState extends State<CropperActionBar> {
           ),
           IconButton(
             onPressed: () {
-              widget.onRotate(RotationAngle.clockwise90);
+              widget.onRotate(RotationAngle.clockwise1);
             },
             tooltip: widget.translations.rotateRightTooltip,
             icon: Icon(
