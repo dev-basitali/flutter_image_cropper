@@ -117,9 +117,9 @@ class CropAspectRatio {
   @override
   bool operator ==(other) =>
       identical(this, other) ||
-      other is CropAspectRatio &&
-          this.ratioX == other.ratioX &&
-          this.ratioY == other.ratioY;
+          other is CropAspectRatio &&
+              this.ratioX == other.ratioX &&
+              this.ratioY == other.ratioY;
 }
 
 ///
@@ -228,36 +228,36 @@ class AndroidUiSettings extends PlatformUiSettings {
 
   @override
   Map<String, dynamic> toMap() => {
-        'android.toolbar_title': this.toolbarTitle,
-        'android.toolbar_color': int32(this.toolbarColor?.value),
-        'android.statusbar_color': int32(this.statusBarColor?.value),
-        'android.toolbar_widget_color': int32(this.toolbarWidgetColor?.value),
-        'android.background_color': int32(this.backgroundColor?.value),
-        'android.active_controls_widget_color':
-            int32(this.activeControlsWidgetColor?.value),
-        'android.dimmed_layer_color': int32(this.dimmedLayerColor?.value),
-        'android.crop_frame_color': int32(this.cropFrameColor?.value),
-        'android.crop_grid_color': int32(this.cropGridColor?.value),
-        'android.crop_frame_stroke_width': this.cropFrameStrokeWidth,
-        'android.crop_grid_row_count': this.cropGridRowCount,
-        'android.crop_grid_column_count': this.cropGridColumnCount,
-        'android.crop_grid_stroke_width': this.cropGridStrokeWidth,
-        'android.show_crop_grid': this.showCropGrid,
-        'android.lock_aspect_ratio': this.lockAspectRatio,
-        'android.hide_bottom_controls': this.hideBottomControls,
-        'android.init_aspect_ratio': this.initAspectRatio?.name,
-        'android.crop_style': this.cropStyle.name,
-        'android.aspect_ratio_presets': aspectRatioPresets
-            .map<Map<String, dynamic>>((item) => {
-                  'name': item.name,
-                  if (item.data != null)
-                    'data': {
-                      'ratio_x': item.data!.$1,
-                      'ratio_y': item.data!.$2,
-                    },
-                })
-            .toList(),
-      };
+    'android.toolbar_title': this.toolbarTitle,
+    'android.toolbar_color': int32(this.toolbarColor?.value),
+    'android.statusbar_color': int32(this.statusBarColor?.value),
+    'android.toolbar_widget_color': int32(this.toolbarWidgetColor?.value),
+    'android.background_color': int32(this.backgroundColor?.value),
+    'android.active_controls_widget_color':
+    int32(this.activeControlsWidgetColor?.value),
+    'android.dimmed_layer_color': int32(this.dimmedLayerColor?.value),
+    'android.crop_frame_color': int32(this.cropFrameColor?.value),
+    'android.crop_grid_color': int32(this.cropGridColor?.value),
+    'android.crop_frame_stroke_width': this.cropFrameStrokeWidth,
+    'android.crop_grid_row_count': this.cropGridRowCount,
+    'android.crop_grid_column_count': this.cropGridColumnCount,
+    'android.crop_grid_stroke_width': this.cropGridStrokeWidth,
+    'android.show_crop_grid': this.showCropGrid,
+    'android.lock_aspect_ratio': this.lockAspectRatio,
+    'android.hide_bottom_controls': this.hideBottomControls,
+    'android.init_aspect_ratio': this.initAspectRatio?.name,
+    'android.crop_style': this.cropStyle.name,
+    'android.aspect_ratio_presets': aspectRatioPresets
+        .map<Map<String, dynamic>>((item) => {
+      'name': item.name,
+      if (item.data != null)
+        'data': {
+          'ratio_x': item.data!.$1,
+          'ratio_y': item.data!.$2,
+        },
+    })
+        .toList(),
+  };
 }
 
 ///
@@ -389,57 +389,57 @@ class IOSUiSettings extends PlatformUiSettings {
 
   @override
   Map<String, dynamic> toMap() => {
-        'ios.minimum_aspect_ratio': this.minimumAspectRatio,
-        'ios.rect_x': this.rectX,
-        'ios.rect_y': this.rectY,
-        'ios.rect_width': this.rectWidth,
-        'ios.rect_height': this.rectHeight,
-        'ios.show_activity_sheet_on_done': this.showActivitySheetOnDone,
-        'ios.show_cancel_confirmation_dialog':
-            this.showCancelConfirmationDialog,
-        'ios.rotate_clockwise_button_hidden': this.rotateClockwiseButtonHidden,
-        'ios.embed_in_navigation_controller': this.embedInNavigationController,
-        'ios.hides_navigation_bar': this.hidesNavigationBar,
-        'ios.rotate_button_hidden': this.rotateButtonsHidden,
-        'ios.reset_button_hidden': this.resetButtonHidden,
-        'ios.aspect_ratio_picker_button_hidden':
-            this.aspectRatioPickerButtonHidden,
-        'ios.reset_aspect_ratio_enabled': this.resetAspectRatioEnabled,
-        'ios.aspect_ratio_lock_dimension_swap_enabled':
-            this.aspectRatioLockDimensionSwapEnabled,
-        'ios.aspect_ratio_lock_enabled': this.aspectRatioLockEnabled,
-        'ios.title': this.title,
-        'ios.done_button_title': this.doneButtonTitle,
-        'ios.cancel_button_title': this.cancelButtonTitle,
-        'ios.crop_style': this.cropStyle.name,
-        'ios.aspect_ratio_presets': aspectRatioPresets
-            .map<Map<String, dynamic>>((item) => {
-                  'name': item.name,
-                  if (item.data != null)
-                    'data': {
-                      'ratio_x': item.data!.$1,
-                      'ratio_y': item.data!.$2,
-                    },
-                })
-            .toList(),
-      };
+    'ios.minimum_aspect_ratio': this.minimumAspectRatio,
+    'ios.rect_x': this.rectX,
+    'ios.rect_y': this.rectY,
+    'ios.rect_width': this.rectWidth,
+    'ios.rect_height': this.rectHeight,
+    'ios.show_activity_sheet_on_done': this.showActivitySheetOnDone,
+    'ios.show_cancel_confirmation_dialog':
+    this.showCancelConfirmationDialog,
+    'ios.rotate_clockwise_button_hidden': this.rotateClockwiseButtonHidden,
+    'ios.embed_in_navigation_controller': this.embedInNavigationController,
+    'ios.hides_navigation_bar': this.hidesNavigationBar,
+    'ios.rotate_button_hidden': this.rotateButtonsHidden,
+    'ios.reset_button_hidden': this.resetButtonHidden,
+    'ios.aspect_ratio_picker_button_hidden':
+    this.aspectRatioPickerButtonHidden,
+    'ios.reset_aspect_ratio_enabled': this.resetAspectRatioEnabled,
+    'ios.aspect_ratio_lock_dimension_swap_enabled':
+    this.aspectRatioLockDimensionSwapEnabled,
+    'ios.aspect_ratio_lock_enabled': this.aspectRatioLockEnabled,
+    'ios.title': this.title,
+    'ios.done_button_title': this.doneButtonTitle,
+    'ios.cancel_button_title': this.cancelButtonTitle,
+    'ios.crop_style': this.cropStyle.name,
+    'ios.aspect_ratio_presets': aspectRatioPresets
+        .map<Map<String, dynamic>>((item) => {
+      'name': item.name,
+      if (item.data != null)
+        'data': {
+          'ratio_x': item.data!.$1,
+          'ratio_y': item.data!.$2,
+        },
+    })
+        .toList(),
+  };
 }
 
 typedef WebDialogBuilder = Widget Function(
-  Widget cropper,
-  void Function() initCropper,
-  Future<String?> Function() crop,
-  void Function(RotationAngle) rotate,
-  void Function(num) scale,
-);
+    Widget cropper,
+    void Function() initCropper,
+    Future<String?> Function() crop,
+    void Function(RotationAngle) rotate,
+    void Function(num) scale,
+    );
 
 typedef WebRouteBuilder = PageRoute<String> Function(
-  Widget cropper,
-  void Function() initCropper,
-  Future<String?> Function() crop,
-  void Function(RotationAngle) rotate,
-  void Function(num) scale,
-);
+    Widget cropper,
+    void Function() initCropper,
+    Future<String?> Function() crop,
+    void Function(RotationAngle) rotate,
+    void Function(num) scale,
+    );
 
 enum WebPresentStyle { dialog, page }
 
@@ -688,28 +688,18 @@ class WebUiSettings extends PlatformUiSettings {
 }
 
 enum RotationAngle {
-  clockwise90,
-  clockwise180,
-  clockwise270,
-  counterClockwise90,
-  counterClockwise180,
-  counterClockwise270,
+  clockwise1,
+  counterClockwise1,
 }
 
 int rotationAngleToNumber(RotationAngle angle) {
   switch (angle) {
-    case RotationAngle.clockwise90:
-      return 90;
-    case RotationAngle.clockwise180:
-      return 180;
-    case RotationAngle.clockwise270:
-      return 270;
-    case RotationAngle.counterClockwise90:
-      return -90;
-    case RotationAngle.counterClockwise180:
-      return -180;
-    case RotationAngle.counterClockwise270:
-      return -270;
+    case RotationAngle.clockwise1:
+      return 1;
+    case RotationAngle.counterClockwise1:
+      return -1;
+
+
   }
 }
 
@@ -795,12 +785,12 @@ class WebThemeData {
   @override
   int get hashCode {
     return rotateLeftIcon.hashCode ^
-        rotateRightIcon.hashCode ^
-        doneIcon.hashCode ^
-        rotateIconColor.hashCode ^
-        scaleSliderMinValue.hashCode ^
-        scaleSliderMaxValue.hashCode ^
-        scaleSliderDivisions.hashCode;
+    rotateRightIcon.hashCode ^
+    doneIcon.hashCode ^
+    rotateIconColor.hashCode ^
+    scaleSliderMinValue.hashCode ^
+    scaleSliderMaxValue.hashCode ^
+    scaleSliderDivisions.hashCode;
   }
 }
 
